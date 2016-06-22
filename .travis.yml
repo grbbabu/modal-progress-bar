@@ -5,3 +5,7 @@ before_install:
   - npm install -g bower grunt-cli
 after_script:
   - npm run coveralls
+cache:
+  directories:
+    - node_modules
+    - bower_components
