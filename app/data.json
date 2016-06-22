@@ -1,0 +1,10 @@
+{
+  "total": 1,
+  "data": {
+    "lightbox": {
+      "start": 0,
+      "finish": 100,
+      "duration": 2000
+    }
+  }
+}

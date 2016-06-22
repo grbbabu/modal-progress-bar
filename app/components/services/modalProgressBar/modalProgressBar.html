@@ -1,0 +1,28 @@
+<div class="modal-progress-bar">
+  <div class="modal-header progress-bar-header">
+    <div class="row">
+      <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11"><h3 class="modal-title">Progress</h3></div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 close-icon" data-ng-click="modalvm.ok()">
+        <img src="images/close.png" class="pull-right" aria-label="Close Light box."/>
+      </div>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2"></div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8">
+        <uib-progressbar max="modalvm.max" value="modalvm.progress" animate="true" type="{{modalvm.progressType}}"></uib-progressbar>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center status-text">
+        <span data-ng-if="modalvm.progress < modalvm.max">Progress {{modalvm.progress}}%</span>
+        <span data-ng-if="modalvm.progress === modalvm.max">
+          This task is {{modalvm.progress}}% completed <img src="images/tick.png" aria-hidden="true"/>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
